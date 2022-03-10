@@ -4,27 +4,27 @@
 
 ### Configuration
 
-- In the current terminal verify the path is `sdk/nft` and run `npm i` to install all dependencies
+- In the current terminal verify the path is `nft-sdk` and run `npm i` to install all dependencies
 
 ### To Run All Test Files
 
-- In a new terminal verify the path is `sdk/nft` and run `npm run ganache` to start the local Ganache node.
+- In a new terminal verify the path is `nft-sdk` and run `npm run ganache` to start the local Ganache node.
 
-- In the original terminal where `npm i` was executed verify the path is `sdk/nft` and run `npm run test` or `npm test`.
+- In the original terminal where `npm i` was executed verify the path is `nft-sdk` and run `npm run test` or `npm test`.
 
 ### To Run A Single Test File
 
 - Single test file titles `MediaFactory`, `ZapMedia`, `AuctionHouse`.
 
-- If the `To Run All Test Files` section was skipped in a new terminal verify the path is `sdk/nft` and run `npm run ganache` to start the local Ganache node.
+- If the `To Run All Test Files` section was skipped in a new terminal verify the path is `nft-sdk` and run `npm run ganache` to start the local Ganache node.
 
-- In the original terminal where `npm i` was executed verify the path is `sdk/nft` and run `npm test -- --grep <test-file-title>`
+- In the original terminal where `npm i` was executed verify the path is `nft-sdk` and run `npm test -- --grep <test-file-title>`
 
 ### To Run A Single Test
 
-- If the `To Run All Test Files` section was skipped in a new terminal verify the path is `sdk/nft` and run `npm run ganache` to start the local Ganache node.
+- If the `To Run All Test Files` section was skipped in a new terminal verify the path is `nft-sdk` and run `npm run ganache` to start the local Ganache node.
 
-- In the original terminal where `npm i` was executed verify the path is `sdk/nft`. Choose a test file and add `.only` to a single `it` or `describe` block and run `npm test`.
+- In the original terminal where `npm i` was executed verify the path is `nft-sdk`. Choose a test file and add `.only` to a single `it` or `describe` block and run `npm test`.
 
 Will only run the `Should fetch the total media minted on the main media` test.
 
