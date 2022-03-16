@@ -180,3 +180,12 @@ Fetch if the specified operator is approved for all tokenId's owned by the speci
 | ------------ | -------- | -------------------------------------------------- |
 | owner        | string   | The address of the token's owner                   |
 | operator     | string   | The address of the approved on behalf of the owner |
+
+### updateContentURI
+
+Updates the contentURI of a specified tokenId
+
+| **Argument** | **Type** | **Description**                                                              |
+| ------------ | -------- | ---------------------------------------------------------------------------- |
+| tokenId      | string   | The numerical identifier of a minted token whose contentURI is being updated |
+| tokenURI     | string   | The tokenURI to be updated to                                                |

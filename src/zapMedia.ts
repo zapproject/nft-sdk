@@ -40,7 +40,7 @@ class ZapMedia {
   public market: Contract;
   public signer: Signer;
   public mediaAddress: string;
-  public marketAddress: string;  
+  public marketAddress: string;
 
   constructor(networkId: number, signer: Signer, customMediaAddress?: string) {
     this.networkId = networkId;
@@ -295,6 +295,11 @@ class ZapMedia {
     return this.media.isApprovedForAll(owner, operator);
   }
 
+  /**
+   * Updates the contentURI of a specified tokenId
+   * @param mediaId The numerical identifier of a minted token whose contentURI is being updated
+   * @param tokenURI The tokenURI to be updated to
+   */
   public async updateContentURI(
     mediaId: number,
     tokenURI: string
@@ -900,9 +905,7 @@ class ZapMedia {
     return isAmountValid && isSellOnShareValid;
   }
 
- public async isValidBidShares(
-    bidShares: BidShares,
-  ): Promise<boolean> {
+  public async isValidBidShares(bidShares: BidShares): Promise<boolean> {
     return this.market.isValidBidShares(bidShares);
   }
 
