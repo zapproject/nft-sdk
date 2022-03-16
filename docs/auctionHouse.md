@@ -1,35 +1,8 @@
-default | zap-nft-sdkdocument.body.classList.add(localStorage.getItem("tsd-theme") || "os")
-
-Search
-
-*   Preparing search index...
-*   The search index is not available
-
-[zap-nft-sdk](../docs-gen/index.html)
-
-[Options](#)
-
-All
-
-*   Public
-*   Public/Protected
-*   All
-
-InheritedExternals
-
-[Menu](#)
-
-*   [zap-nft-sdk](../docs-gen/modules.html)
-*   [default]()
-
-Class default
+AuctionHouse
 =============
 
 The Auction House class binding for the AuctionHouse smart contract. An open auction house smart contract, enabling creators, collectors, and curators to sell their NFTs as their own auctions.
 
-### Hierarchy
-
-*   default
 
 Index
 -----
@@ -56,33 +29,17 @@ Index
 *   [setAuctionReservePrice](#setAuctionReservePrice)
 *   [startAuction](#startAuction)
 
-Constructors
+Constructor
 ------------
 
 ### constructor[](#constructor)
+*   Defined in [auctionHouse.ts:43](https://github.com/zapproject/nft-sdk/blob/ea00ee9/src/auctionHouse.ts#L43)
 
-*   new default(chainId: number, signer: Signer, customMediaAddress?: string): [default]()
-
-*   *   Defined in [auctionHouse.ts:43](https://github.com/zapproject/nft-sdk/blob/ea00ee9/src/auctionHouse.ts#L43)
-    
-    Constructor
-    
-    #### Parameters
-    
-    *   ##### chainId: number
-        
-        The network chain ID the auction house is associated with
-        
-    *   ##### signer: Signer
-        
-        The owner of the auction house
-        
-    *   ##### Optional customMediaAddress: string
-        
-        Optional argument if the auction house is for a custom media contract
-        
-    
-    #### Returns [default]()
+| **Argument**       | **Type**     | **Description**                                                       |
+| ------------------ | ------------ | --------------------------------------------------------------------- |
+| chainId            | number       | The network chain ID the auction house is associated with             |
+| signer             | Signer       | The owner of the auction house                                        |
+| customMediaAddress | string       | Optional argument if the auction house is for a custom media contract |
     
 
 Properties
@@ -123,12 +80,9 @@ Methods
     
     Cancels the specified auction. Owner or curator can cancel the auction if the auction does not have a bid placed.
     
-    #### Parameters
-    
-    *   ##### auctionId: BigNumberish
-        
-        The auction ID identifier to approve the start of the auction
-        
+| **Argument** | **Type**     | **Description**                                               |
+| ------------ | ------------ | ------------------------------------------------------------- |
+| auctionId    | BigNumberish | The auction ID identifier to approve the start of the auction |
     
     #### Returns Promise<any\>
     
@@ -143,35 +97,15 @@ Methods
     
     Creates a new auction. Mup>The Auction House class binding for the AuctionHouse smart contract. An open auction house smart contract, enabling creators, collectors, and curators to sell their NFTs as their own auctions.
     
-    lass="tsd-parameters">
-    
-*   ##### tokenId: BigNumberish
-    
-    The token ID identifier the token being auctioned belongs to
-    
-*   ##### tokenAddress: string
-    
-    The media contract address associated with the token
-    
-*   ##### duration: BigNumberish
-    
-    The duration of the auction (in milliseconds)
-    
-*   ##### reservePrice: BigNumberish
-    
-    The reserve price for the auction
-    
-*   ##### curator: string
-    
-    The optional curator address associated with the auction
-    
-*   ##### curatorFeePercentages: number
-    
-    The optional curator fee percentage for the auction
-    
-*   ##### auctionCurrency: string
-    
-    The currency associated with the auction
+| **Argument**       | **Type**     | **Description**                                                       |
+| ------------ | -------- | -------- |
+| tokenId | Bignumberish | The token ID identifier the token being auctioned belongs to |
+| tokenAddress | string |  The media contract address associated with the token |
+| duration | BigNumberish | The duration of the auction (in milliseconds) |
+| reservePrice | BigNumberish | The reserve price for the auction |
+| curator | string | The optional curator address associated with the auction |
+| curatorFeePercentages | number | The optional curator fee percentage for the auction |
+| auctionCurrency | string | The currency associated with the auction |
     
 
 #### Returns Promise<any\>
@@ -186,19 +120,11 @@ The Promise auction ID associated with the created auction
     
     Creates a bid on the specified auction. Can only place a valid bid after the start of the auction.
     
-    #### Parameters
-    
-    *   ##### auctionId: BigNumberish
-        
-        The auction ID identifier to approve the start of the auction
-        
-    *   ##### amount: BigNumberish
-        
-        The bid amount to be bid
-        
-    *   ##### mediaContract: string
-        
-        The media contract address associated with the auction
+| **Argument**       | **Type**     | **Description**                                                       |
+| ------------ | -------- | -------- |
+| auctionId | BigNumberish | The auction ID identifier to approve the start of the auction |
+| amount | BigNumberish | The bid amount to be bid |
+| mediaContract | string | The media contract address associated with the auction |
         
     
     #### Returns Promise<any\>
@@ -214,16 +140,10 @@ The Promise auction ID associated with the created auction
     
     Ends the specified auction, only if called by owner or curator, a bid has been placed, and the duration of the auction has passed
     
-    #### Parameters
-    
-    *   ##### auctionId: BigNumberish
-        
-        The auction ID identifier to approve the start of the auction
-        
-    *   ##### mediaAddress: string
-        
-        The media contract address associated with the auction
-        
+| **Argument**       | **Type**     | **Description**                                                       |
+| ------------ | -------- | -------- |
+| auctionId | BigNumberish | The auction ID identifier to approve the start of the auction |
+| mediaAddress | string | The media address associated with the auction |
     
     #### Returns Promise<any\>
     
@@ -238,12 +158,9 @@ The Promise auction ID associated with the created auction
     
     Getter for a auction object specified by the auction ID.
     
-    #### Parameters
-    
-    *   ##### auctionId: BigNumberish
-        
-        The auction ID identifier to retreive the auction object
-        
+| **Argument**       | **Type**     | **Description**                                                       |
+| ------------ | -------- | -------- |
+| auctionId | BigNumberish | The auction ID identifier to retreive the auction object |
     
     #### Returns Promise<any\>
     
@@ -257,13 +174,10 @@ The Promise auction ID associated with the created auction
 *   *   Defined in [auctionHouse.ts:81](https://github.com/zapproject/nft-sdk/blob/ea00ee9/src/auctionHouse.ts#L81)
     
     Getter for a auction object specified by the transaction receipt.
-    
-    #### Parameters
-    
-    *   ##### receipt: TransactionReceipt
-        
-        The transaction receipt identifier to retreive the auction object
-        
+
+| **Argument**       | **Type**     | **Description**                                                       |
+| ------------ | -------- | -------- |
+| receipt | TransactionReceipt | The transaction receipt identifier to retreive the auction object |
     
     #### Returns Promise<null | [Auction](../docs-gen/interfaces/Auction.html)\>
     
@@ -277,17 +191,11 @@ The Promise auction ID associated with the created auction
 *   *   Defined in [auctionHouse.ts:216](https://github.com/zapproject/nft-sdk/blob/ea00ee9/src/auctionHouse.ts#L216)
     
     Sets the reserve price for the specified auction
-    
-    #### Parameters
-    
-    *   ##### auctionId: BigNumberish
-        
-        The auction ID identifier to approve the start of the auction
-        
-    *   ##### reservePrice: BigNumberish
-        
-        The reserve price for the specified auction
-        
+
+| **Argument**       | **Type**     | **Description**                                                       |
+| ------------ | -------- | ------- |
+| auctionId | BigNumberish | The auction ID identifier to approve the start of the auction |
+| reservePrice | BigNumberish | The reserve price for the specified auction |
     
     #### Returns Promise<any\>
     
@@ -302,16 +210,10 @@ The Promise auction ID associated with the created auction
     
     Approves the start of the specified auction, if a curator was set for the auction. Can only be called by the curator,
     
-    #### Parameters
-    
-    *   ##### auctionId: BigNumberish
-        
-        The auction ID identifier to approve the start of the auction
-        
-    *   ##### approved: boolean
-        
-        The approved flagged whether the start of the auction is approved or not
-        
+| **Argument**       | **Type**     | **Description**                                                       |
+| ------------ | -------- | ------- |
+| auctionId | BigNumberish | The auction ID identifier to approve the start of the auction |
+| approved | boolean | The approved flagged whether the start of the auction is approved or not |
     
     #### Returns Promise<any\>
     
@@ -344,9 +246,5 @@ Legend
 
 *   Property
 
-Settings
---------
 
 Theme OSLightDark
-
-Generated using [TypeDoc](https://typedoc.org/)
