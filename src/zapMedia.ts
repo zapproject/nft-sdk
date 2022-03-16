@@ -627,7 +627,7 @@ class ZapMedia {
 
   /**
    * Sets a bid on the specified tokenId
-   * @param tokenId The numerical identifier
+   * @param tokenId The numerical identifier of a minted token to set a bid on
    * @param bid The bid to be set
    */
   public async setBid(
@@ -731,9 +731,9 @@ class ZapMedia {
   }
 
   /**
-   * Updates the metadata uri for the specified media on an instance of the Zap Media Contract
-   * @param tokenId
-   * @param metadataURI
+   * Updates the metadata uri for the specified tokenId
+   * @param tokenId The numerical identifier of a minted token whose metadata is being updated
+   * @param metadataURI The metadata to be updated to
    */
   public async updateMetadataURI(
     tokenId: BigNumberish,
@@ -797,7 +797,7 @@ class ZapMedia {
 
   /**
    * Revokes the approved address for a specified tokenId
-   * @param tokenId Numerical identifier for a minted token who approval is being revoked
+   * @param tokenId The umerical identifier for a minted token who approval is being revoked
    */
   public async revokeApproval(
     tokenId: BigNumberish

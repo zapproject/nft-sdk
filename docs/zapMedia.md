@@ -199,7 +199,76 @@ Sets the Ask on a specified tokenId
 | **Argument** | **Type**     | **Description**                                                   |
 | ------------ | ------------ | ----------------------------------------------------------------- |
 | tokenId      | BigNumberish | The numerical identifier of a minted token whose ask is being set |
-| ask          | string       | The ask to be set                                                 |
+| ask          | Ask          | The ask to be set                                                 |
+
+### setBid
+
+Sets a bid on the specified tokenId
+
+| **Argument** | **Type**     | **Description**                                            |
+| ------------ | ------------ | ---------------------------------------------------------- |
+| tokenId      | BigNumberish | The numerical identifier of a minted token to set a bid on |
+| bid          | Bid          | The bid to be set                                          |
+
+### removeAsk
+
+Removes the ask on the specified tokenId
+
+| **Argument** | **Type**     | **Description**                                     |
+| ------------ | ------------ | --------------------------------------------------- |
+| tokenId      | BigNumberish | The numerical identifier whose ask is being removed |
+
+### acceptBid
+
+Accept a bid on a specified tokenId
+
+| **Argument** | **Type**     | **Description**                                                        |
+| ------------ | ------------ | ---------------------------------------------------------------------- |
+| tokenId      | BigNumberish | The numerical identifier of a minted token whose bid is being accepted |
+| bid          | Bid          | The bid to be accepted                                                 |
+
+### removeBid
+
+Removes the bid from a specified tokenId
+
+| **Argument** | **Type**     | **Description**                                                       |
+| ------------ | ------------ | --------------------------------------------------------------------- |
+| tokenId      | BigNumberish | The Numerical identifier of a minted token whose bid is being removed |
+
+### updateMetadataURI
+
+Updates the metadataUII of a specified tokenId
+
+| **Argument** | **Type**     | **Description**                                                            |
+| ------------ | ------------ | -------------------------------------------------------------------------- |
+| tokenId      | BigNumberish | The numerical identifier of a minted token whose metadURI is being updated |
+| metadataURI  | string       | The metadataURI to be updated to                                           |
+
+### permit
+
+Permit an address to act on behalf of the owner of the tokenId
+
+| **Argument** | **Type**        | **Description**                                          |
+| ------------ | --------------- | -------------------------------------------------------- |
+| spender      | string          | The address that is being permitted to spend the tokenId |
+| tokenId      | string          | The numerical identifier for a minted token              |
+| sig          | EIP712Signature | The eip-712 compliant signature to be verified on chain  |
+
+### revokeApproval
+
+Revokes the approved address for a specified tokenId
+
+| **Argument** | **Type** | **Description**                                                           |
+| ------------ | -------- | ------------------------------------------------------------------------- |
+| tokenId      | string   | The numerical identifier for a minted token who approval is being revoked |
+
+### burn
+
+Burns a specified tokenId
+
+| **Argument** | **Type** | **Description**                                          |
+| ------------ | -------- | -------------------------------------------------------- |
+| tokenId      | string   | The numerical identifier for a minted token to be burned |
 
 ### updateContentURI
 
