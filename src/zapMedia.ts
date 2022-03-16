@@ -301,7 +301,7 @@ class ZapMedia {
    * @param tokenURI The tokenURI to be updated to
    */
   public async updateContentURI(
-    mediaId: number,
+    mediaId: BigNumberish,
     tokenURI: string
   ): Promise<ContractTransaction> {
     let owner: string;

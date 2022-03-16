@@ -185,7 +185,7 @@ Fetch if the specified operator is approved for all tokenId's owned by the speci
 
 Updates the contentURI of a specified tokenId
 
-| **Argument** | **Type** | **Description**                                                              |
-| ------------ | -------- | ---------------------------------------------------------------------------- |
-| tokenId      | string   | The numerical identifier of a minted token whose contentURI is being updated |
-| tokenURI     | string   | The tokenURI to be updated to                                                |
+| **Argument** | **Type**     | **Description**                                                              |
+| ------------ | ------------ | ---------------------------------------------------------------------------- |
+| tokenId      | BigNumberish | The numerical identifier of a minted token whose contentURI is being updated |
+| tokenURI     | string       | The tokenURI to be updated to                                                |
