@@ -364,9 +364,9 @@ class ZapMedia {
    */
 
   /**
-   * Grants approval to the specified address for the specified media on an instance of the Zap Media Contract
+   * Grant approval to the specified address for the specified tokenId
    * @param to The address to be approved
-   * @param tokenId Numerical identifier for a minted token
+   * @param tokenId The numerical identifier for a minted token to grant approval for
    */
   public async approve(
     to: string,
@@ -397,9 +397,9 @@ class ZapMedia {
   }
 
   /**
-   * Grants approval for all media owner by msg.sender on an instance of the Zap Media Contract
-   * @param operator
-   * @param approved
+   * Grants approval for all an owners assets
+   * @param operator The address of the account the approvalForAll is being set
+   * @param approved Whether or not the operator address is being granted approval
    */
   public async setApprovalForAll(
     operator: string,
@@ -415,10 +415,10 @@ class ZapMedia {
   }
 
   /**
-   * Transfers the specified media to the specified to address on an instance of the Zap Media Contract
+   * Transfers the specified tokenId to the specified to address
    * @param from The address of the owner who is transferring the token
    * @param to The receiving address
-   * @param tokenId Numerical identifier for a minted token
+   * @param tokenId The numerical identifier for a minted token being transferred
    */
   public async transferFrom(
     from: string,
@@ -472,10 +472,10 @@ class ZapMedia {
   }
 
   /**
-   * Executes a SafeTransfer of the specified media to the specified address if and only if it adheres to the ERC721-Receiver Interface
+   * Executes a SafeTransfer of the specified tokenId to the specified address if and only if it adheres to the ERC721-Receiver Interface
    * @param from The address of the owner who is transferring the token
    * @param to The receiving address
-   * @param tokenId Numerical identifier for a minted token
+   * @param tokenId The numerical identifier for a minted token to be transferred
    */
   public async safeTransferFrom(
     from: string,
@@ -626,9 +626,9 @@ class ZapMedia {
   }
 
   /**
-   * Sets a bid on the specified media on an instance of the Zap Media Contract
-   * @param tokenId
-   * @param bid
+   * Sets a bid on the specified tokenId
+   * @param tokenId The numerical identifier
+   * @param bid The bid to be set
    */
   public async setBid(
     tokenId: BigNumberish,
@@ -656,8 +656,8 @@ class ZapMedia {
   }
 
   /**
-   * Removes the ask on the specified media on an instance of the Zap Media Contract
-   * @param tokenId Numerical identifier for a minted token
+   * Removes the ask on the specified tokenId
+   * @param tokenId The numerical identifier whose ask is being removed
    */
   public async removeAsk(tokenId: BigNumberish): Promise<ContractTransaction> {
     const ask = await this.market.currentAskForToken(
@@ -679,9 +679,9 @@ class ZapMedia {
   }
 
   /**
-   * Accepts the specified bid on the specified media on an instance of the Zap Media Contract
-   * @param tokenId
-   * @param bid
+   * Accept a bid on a specified tokenId
+   * @param tokenId The numerical identifier of a minted token whose bid is being accepted
+   * @param bid The bid to be accepted
    */
   public async acceptBid(
     tokenId: BigNumberish,
@@ -717,8 +717,8 @@ class ZapMedia {
     return this.media.acceptBid(tokenId, bid);
   }
   /**
-   * Removes the bid for the msg.sender on the specified media on an instance of the Zap Media Contract
-   * @param tokenId
+   * Removes the bid from a specified tokenId
+   * @param tokenId The Numerical identifier of a minted token whose bid is being removed
    */
   public async removeBid(tokenId: BigNumberish): Promise<ContractTransaction> {
     try {
@@ -782,29 +782,22 @@ class ZapMedia {
   }
 
   /**
-   * Grants the spender approval for the specificxed media using meta transactions as outlined in EIP-712
-   * @param sender
-   * @param tokenId
-   * @param sig
+   * Permit an address to act on behalf of the owner of the tokenId
+   * @param spender The address that is being permitted to spend the tokenId
+   * @param tokenId The numerical identifier for a minted token
+   * @param sig The eip-712 compliant signature to be verified on chain
    */
   public async permit(
     spender: string,
     tokenId: BigNumberish,
     sig: EIP712Signature
   ): Promise<ContractTransaction> {
-    // try {
-    //   this.ensureNotReadOnly()
-    // } catch (err) {
-    //   if (err instanceof Error) {
-    //     return Promise.reject(err.message)
-    //   }
-    // }
     return this.media.permit(spender, tokenId, sig);
   }
 
   /**
-   * Revokes the approval of an approved account for the specified media on an instance of the Zap Media Contract
-   * @param tokenId Numerical identifier for a minted token
+   * Revokes the approved address for a specified tokenId
+   * @param tokenId Numerical identifier for a minted token who approval is being revoked
    */
   public async revokeApproval(
     tokenId: BigNumberish
@@ -844,8 +837,8 @@ class ZapMedia {
   }
 
   /**
-   * Burns the specified media on an instance of the Zap Media Contract
-   * @param tokenId Numerical identifier for a minted token
+   * Burns a specified tokenId
+   * @param tokenId The numerical identifier for a minted token to be burned
    */
   public async burn(tokenId: BigNumberish): Promise<ContractTransaction> {
     // Will store the address of the token owner if the tokenId exists
