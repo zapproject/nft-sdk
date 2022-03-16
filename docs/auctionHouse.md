@@ -5,7 +5,7 @@ Search
 *   Preparing search index...
 *   The search index is not available
 
-[zap-nft-sdk](../index.html)
+[zap-nft-sdk](../docs-gen/index.html)
 
 [Options](#)
 
@@ -19,8 +19,8 @@ InheritedExternals
 
 [Menu](#)
 
-*   [zap-nft-sdk](../modules.html)
-*   [default](default.html)
+*   [zap-nft-sdk](../docs-gen/modules.html)
+*   [default]()
 
 Class default
 =============
@@ -36,32 +36,32 @@ Index
 
 ### Constructors
 
-*   [constructor](default.html#constructor)
+*   [constructor](#constructor)
 
 ### Properties
 
-*   [auctionHouse](default.html#auctionHouse)
-*   [chainId](default.html#chainId)
-*   [media](default.html#media)
-*   [signer](default.html#signer)
+*   [auctionHouse](#auctionHouse)
+*   [chainId](#chainId)
+*   [media](#media)
+*   [signer](#signer)
 
 ### Methods
 
-*   [cancelAuction](default.html#cancelAuction)
-*   [createAuction](default.html#createAuction)
-*   [createBid](default.html#createBid)
-*   [endAuction](default.html#endAuction)
-*   [fetchAuction](default.html#fetchAuction)
-*   [fetchAuctionFromTransactionReceipt](default.html#fetchAuctionFromTransactionReceipt)
-*   [setAuctionReservePrice](default.html#setAuctionReservePrice)
-*   [startAuction](default.html#startAuction)
+*   [cancelAuction](#cancelAuction)
+*   [createAuction](#createAuction)
+*   [createBid](#createBid)
+*   [endAuction](#endAuction)
+*   [fetchAuction](#fetchAuction)
+*   [fetchAuctionFromTransactionReceipt](#fetchAuctionFromTransactionReceipt)
+*   [setAuctionReservePrice](#setAuctionReservePrice)
+*   [startAuction](#startAuction)
 
 Constructors
 ------------
 
 ### constructor[](#constructor)
 
-*   new default(chainId: number, signer: Signer, customMediaAddress?: string): [default](default.html)
+*   new default(chainId: number, signer: Signer, customMediaAddress?: string): [default]()
 
 *   *   Defined in [auctionHouse.ts:43](https://github.com/zapproject/nft-sdk/blob/ea00ee9/src/auctionHouse.ts#L43)
     
@@ -82,7 +82,7 @@ Constructors
         Optional argument if the auction house is for a custom media contract
         
     
-    #### Returns [default](default.html)
+    #### Returns [default]()
     
 
 Properties
@@ -252,7 +252,7 @@ The Promise auction ID associated with the created auction
 
 ### fetchAuctionFromTransactionReceipt[](#fetchAuctionFromTransactionReceipt)
 
-*   fetchAuctionFromTransactionReceipt(receipt: TransactionReceipt): Promise<null | [Auction](../interfaces/Auction.html)\>
+*   fetchAuctionFromTransactionReceipt(receipt: TransactionReceipt): Promise<null | [Auction](../docs-gen/interfaces/Auction.html)\>
 
 *   *   Defined in [auctionHouse.ts:81](https://github.com/zapproject/nft-sdk/blob/ea00ee9/src/auctionHouse.ts#L81)
     
@@ -265,7 +265,7 @@ The Promise auction ID associated with the created auction
         The transaction receipt identifier to retreive the auction object
         
     
-    #### Returns Promise<null | [Auction](../interfaces/Auction.html)\>
+    #### Returns Promise<null | [Auction](../docs-gen/interfaces/Auction.html)\>
     
     The Promise auction object if it exists
     
@@ -318,22 +318,22 @@ The Promise auction ID associated with the created auction
     The Promise of the contract call
     
 
-*   [Exports](../modules.html)
+*   [Exports](../docs-gen/modules.html)
 
-*   [default](default.html)
-    *   [constructor](default.html#constructor)
-    *   [auctionHouse](default.html#auctionHouse)
-    *   [chainId](default.html#chainId)
-    *   [media](default.html#media)
-    *   [signer](default.html#signer)
-    *   [cancelAuction](default.html#cancelAuction)
-    *   [createAuction](default.html#createAuction)
-    *   [createBid](default.html#createBid)
-    *   [endAuction](default.html#endAuction)
-    *   [fetchAuction](default.html#fetchAuction)
-    *   [fetchAuctionFromTransactionReceipt](default.html#fetchAuctionFromTransactionReceipt)
-    *   [setAuctionReservePrice](default.html#setAuctionReservePrice)
-    *   [startAuction](default.html#startAuction)
+*   [default]()
+    *   [constructor](#constructor)
+    *   [auctionHouse](#auctionHouse)
+    *   [chainId](#chainId)
+    *   [media](#media)
+    *   [signer](#signer)
+    *   [cancelAuction](#cancelAuction)
+    *   [createAuction](#createAuction)
+    *   [createBid](#createBid)
+    *   [endAuction](#endAuction)
+    *   [fetchAuction](#fetchAuction)
+    *   [fetchAuctionFromTransactionReceipt](#fetchAuctionFromTransactionReceipt)
+    *   [setAuctionReservePrice](#setAuctionReservePrice)
+    *   [startAuction](#startAuction)
 
 Legend
 ------
