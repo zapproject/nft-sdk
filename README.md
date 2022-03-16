@@ -1,6 +1,7 @@
 # Zap NFT SDK
 
 - [ZapMedia](docs/zapMedia.md)
+- [AuctionHouse](docs-gen/classes/default.html)
 
 ## Local Testing
 
