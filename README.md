@@ -1,5 +1,7 @@
 # Zap NFT SDK
 
+- [ZapMedia](docs/zapMedia.md)
+
 ## Local Testing
 
 ### Configuration
