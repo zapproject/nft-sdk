@@ -181,6 +181,17 @@ Fetch if the specified operator is approved for all tokenId's owned by the speci
 | owner        | string   | The address of the token's owner                   |
 | operator     | string   | The address of the approved on behalf of the owner |
 
+## Write Functions
+
+### mint
+
+Create and allocate an ERC-721 token to the callers public address
+
+| **Argument** | **Type**  | **Description**                                                                         |
+| ------------ | --------- | --------------------------------------------------------------------------------------- |
+| mediaData    | MediaData | The data represented by this media, including SHA256 hashes for future integrity checks |
+| bidShares    | BidShares | The percentage of bid fees that should be perpetually rewarded to share holders         |
+
 ### updateContentURI
 
 Updates the contentURI of a specified tokenId

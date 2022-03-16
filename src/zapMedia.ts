@@ -533,9 +533,9 @@ class ZapMedia {
   }
 
   /**
-   * Mints a new piece of media on an instance of the Zap Media Contract
-   * @param mintData
-   * @param bidShares
+   * Create and allocate an ERC-721 token to the callers public address
+   * @param mediaData The data represented by this media, including SHA256 hashes for future integrity checks
+   * @param bidShares The percentage of bid fees that should be perpetually rewarded to share holders
    */
   public async mint(
     mediaData: MediaData,
