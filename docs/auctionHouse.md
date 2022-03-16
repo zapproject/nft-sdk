@@ -1,5 +1,5 @@
-AuctionHouse
-=============
+AuctionHouse Class
+==================
 
 The Auction House class binding for the AuctionHouse smart contract. An open auction house smart contract, enabling creators, collectors, and curators to sell their NFTs as their own auctions.
 
@@ -45,13 +45,13 @@ Constructor
 Properties
 ----------
 
-### Readonly auctionHouse[](#auctionHouse)
+### auctionHouse[](#auctionHouse)
 
 auctionHouse: Contract
 
 *   Defined in [auctionHouse.ts:32](https://github.com/zapproject/nft-sdk/blob/ea00ee9/src/auctionHouse.ts#L32)
 
-### Readonly chainId[](#chainId)
+### chainId[](#chainId)
 
 chainId: number
 
@@ -63,7 +63,7 @@ media: ZapMedia
 
 *   Defined in [auctionHouse.ts:35](https://github.com/zapproject/nft-sdk/blob/ea00ee9/src/auctionHouse.ts#L35)
 
-### Readonly signer[](#signer)
+### signer[](#signer)
 
 signer: Signer
 
