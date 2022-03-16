@@ -192,6 +192,15 @@ Create and allocate an ERC-721 token to the callers public address
 | mediaData    | MediaData | The data represented by this media, including SHA256 hashes for future integrity checks |
 | bidShares    | BidShares | The percentage of bid fees that should be perpetually rewarded to share holders         |
 
+### setAsk
+
+Sets the Ask on a specified tokenId
+
+| **Argument** | **Type**     | **Description**                                                   |
+| ------------ | ------------ | ----------------------------------------------------------------- |
+| tokenId      | BigNumberish | The numerical identifier of a minted token whose ask is being set |
+| ask          | string       | The ask to be set                                                 |
+
 ### updateContentURI
 
 Updates the contentURI of a specified tokenId
