@@ -31,5 +31,5 @@ jobs:
       - run: yarn install --frozen-lockfile
       - run: yarn global add ganache-cli
       - run: yarn run build
-
-  test: echo "Testing"
+      - run: gnome-terminal -e
+      # - run: yarn test
