@@ -30,8 +30,5 @@ jobs:
           cache: "yarn"
       - run: yarn install --frozen-lockfile
       - run: yarn run build
-      - run:
-        command: yarn ganache
-        background: true
-
+      - run: yarn ganache
       - run: yarn test
