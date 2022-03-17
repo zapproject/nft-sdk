@@ -32,4 +32,4 @@ jobs:
       - run: yarn global add ganache-cli
       - run: yarn run build
       - run: nohup yarn ganache
-      # - run: yarn test
+      - run: yarn test
