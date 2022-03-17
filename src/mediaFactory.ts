@@ -22,7 +22,7 @@ class MediaFactory {
   }
 
   /**
-   * Deploys a NFT collection.
+   * Deploys a custom NFT collection.
    * @param {string} collectionName - The name of the NFT collection.
    * @param {string} collectionSymbol - The symbol of the NFT collection.
    * @param {boolean} permissive - Determines if minting can be performed other than the collection owner.
@@ -32,14 +32,14 @@ class MediaFactory {
     collectionName: string,
     collectionSymbol: string,
     permissive: boolean,
-    collectionMetadta: string
+    collectionMetadata: string
   ): Promise<any> {
     const tx = await this.contract.deployMedia(
       collectionName,
       collectionSymbol,
       contractAddresses(this.networkId).zapMarketAddress,
       permissive,
-      collectionMetadta
+      collectionMetadata
     );
 
     const receipt = await tx.wait();

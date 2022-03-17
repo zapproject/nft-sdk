@@ -1,5 +1,6 @@
 # Zap NFT SDK
 
+- [MediaFactory](docs/mediaFactory.md)
 - [ZapMedia](docs/zapMedia.md)
 - [AuctionHouse](docs/auctionHouse.md)
 

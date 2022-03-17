@@ -47,7 +47,7 @@ Valid `networkId`'s accepted by the constructor:
 - 97: Binance Testnet
 - 1337: Ganache Local Testnet
 
-The constructor takes in `networkId` and uses it to route to either the Ethereum Mainnet, Rinkeby Testnet, Binance Mainnet, Binance Testnet, and the local testnet provided by the Ganache node. If the `networkId` is invalid, the `contractAddresses` function will throw the following error `Constructor: Network Id is not supported.`. After routing to one of the networks, the `contractAddresses` function located in `sdk/nft/src/utils.ts` will fetch the `ZapMedia` and `ZapMarket` addresses from `sdk/nft/src/contract/addresses.ts` associated with the `networkId`. The fetched addresses will be used to create contract instances of `ZapMedia` and the `ZapMarket`.
+The constructor takes in `networkId` and uses it to route to either the Ethereum Mainnet, Rinkeby Testnet, Binance Mainnet, Binance Testnet, and the local testnet provided by the Ganache node. If the `networkId` is invalid, the `contractAddresses` function will throw the following error `Constructor: Network Id is not supported.`. After routing to one of the networks, the `contractAddresses` function located in `src/utils.ts` will fetch the `ZapMedia` and `ZapMarket` addresses from `src/contract/addresses.ts` associated with the `networkId`. The fetched addresses will be used to create contract instances of `ZapMedia` and the `ZapMarket`.
 
 The constructor takes in `signer` the abstraction of a Blockchain Account, which can be used to sign messages and transactions and send signed transactions to the Blockchain to execute state changing operations. The `signer` will be used to connect to the `ZapMedia` and `ZapMarket` contracts in order to invoke these state changing transactions.
 
