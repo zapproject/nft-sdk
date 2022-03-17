@@ -1,3 +1,5 @@
-import AuctionHouse, { Auction } from "./auctionHouse";
+export * from "./auctionHouse";
 
-export {AuctionHouse, Auction};
+export * from "./zapMedia"
+
+export * from "./mediaFactory";

@@ -2,13 +2,10 @@
 import { expect } from "chai";
 
 // Ethers Types
-import { Contract, ethers } from "ethers";
-
-// ZapMarket ABI
-import { zapMarketAbi } from "../src/contract/abi";
+import { ethers } from "ethers";
 
 // MediaFactory class
-import MediaFactory from "../src/mediaFactory";
+import { MediaFactory } from "../src/mediaFactory";
 
 // ZapMarket localhost address
 import {
@@ -38,19 +35,16 @@ describe("MediaFactory", () => {
 
   let mediaAddress: string;
 
-  let token: any;
-  let zapVault: any;
-  let zapMediaImpl: any;
   let signer: any;
   let zapMedia: any;
 
   before(async () => {
     signer = provider.getSigner(0);
 
-    token = await deployZapToken();
-    zapVault = await deployZapVault();
+    await deployZapToken();
+    await deployZapVault();
     zapMarket = await deployZapMarket();
-    zapMediaImpl = await deployZapMediaImpl();
+    await deployZapMediaImpl();
     mediaFactory = await deployMediaFactory();
     zapMedia = await deployZapMedia();
 

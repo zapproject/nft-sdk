@@ -1,11 +1,10 @@
 import { BigNumber, BigNumberish, Contract, ethers, Signer } from "ethers";
-import { Provider, TransactionReceipt } from "@ethersproject/providers";
+import { TransactionReceipt } from "@ethersproject/providers";
 
 import { contractAddresses } from "./utils";
-import { zapAuctionAbi, zapMediaAbi } from "./contract/abi";
-import ZapMedia from "./zapMedia";
+import { zapAuctionAbi } from "./contract/abi";
+import { ZapMedia } from "./zapMedia";
 import invariant from "tiny-invariant";
-import { FormatTypes } from "ethers/lib/utils";
 
 export interface Auction {
   token: {
@@ -28,7 +27,7 @@ export interface Auction {
  * The Auction House class binding for the AuctionHouse smart contract. 
  * An open auction house smart contract, enabling creators, collectors, and curators to sell their NFTs as their own auctions.
  */
-class AuctionHouse {
+export class AuctionHouse {
   public readonly auctionHouse: Contract;
   public readonly chainId: number;
   public readonly signer: Signer;
@@ -361,5 +360,3 @@ class AuctionHouse {
     return this.auctionHouse.endAuction(auctionId, mediaAddress);
   }
 }
-
-export default AuctionHouse;
