@@ -30,4 +30,5 @@ jobs:
           cache: "yarn"
       - run: yarn install --no-lockfile
       - run: yarn run build
+      - run: yarn run ganache
       - run: yarn test
