@@ -2,7 +2,7 @@ import chai, { expect } from "chai";
 
 import chaiAsPromised from "chai-as-promised";
 
-import { BigNumber, Contract, ethers, Signer } from "ethers";
+import { Contract, ethers, Signer } from "ethers";
 
 import { constructBidShares, constructMediaData } from "../src/utils";
 
@@ -25,11 +25,10 @@ import {
   deployAuctionHouse,
 } from "../src/deploy";
 
-import AuctionHouse, { Auction } from "../src/auctionHouse";
-import ZapMedia from "../src/zapMedia";
+import { AuctionHouse, Auction } from "../src/auctionHouse";
+import { ZapMedia } from "../src/zapMedia";
 
 import { getSigners } from "./test_utils";
-import { SuiteConstants } from "mocha";
 
 const provider = new ethers.providers.JsonRpcProvider("http://localhost:8545");
 chai.use(chaiAsPromised);
@@ -38,9 +37,7 @@ chai.should();
 
 describe("AuctionHouse", () => {
   let token: Contract;
-  let zapVault: Contract;
   let zapMarket: Contract;
-  let zapMediaImpl: Contract;
   let mediaFactory: Contract;
   let zapMedia: Contract;
   let auctionHouse: Contract;
@@ -71,9 +68,9 @@ describe("AuctionHouse", () => {
     curator = signers[9];
 
     token = await deployZapToken();
-    zapVault = await deployZapVault();
+    await deployZapVault();
     zapMarket = await deployZapMarket();
-    zapMediaImpl = await deployZapMediaImpl();
+    await deployZapMediaImpl();
     mediaFactory = await deployMediaFactory();
     zapMedia = await deployZapMedia();
     auctionHouse = await deployAuctionHouse();
@@ -715,10 +712,8 @@ describe("AuctionHouse", () => {
     });
 
     describe("#endAuction", () => {
-      let invalidSigner: Signer;
       let curator: Signer;
       let bidder: Signer;
-      let invalidSignerConnected: AuctionHouse;
       let bidderMainConnected: AuctionHouse;
       let curatorMainConnected: AuctionHouse;
       let mintAmt: any;
@@ -727,7 +722,6 @@ describe("AuctionHouse", () => {
         mintAmt = 300;
         bidAmt = 200;
         curator = signers[4];
-        invalidSigner = signers[9];
         bidder = signers[5];
 
         await ownerMediaConnected.approve(auctionHouse.address, 0);
@@ -743,7 +737,6 @@ describe("AuctionHouse", () => {
         );
 
         curatorMainConnected = new AuctionHouse(1337, curator);
-        invalidSignerConnected = new AuctionHouse(1337, invalidSigner);
         bidderMainConnected = new AuctionHouse(1337, bidder);
 
         await token.mint(await bidder.getAddress(), mintAmt);

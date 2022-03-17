@@ -2,11 +2,9 @@ import { Contract, ethers, Signer } from "ethers";
 
 import { contractAddresses } from "./utils";
 
-import { mediaFactoryAbi, zapMediaAbi } from "./contract/abi";
+import { mediaFactoryAbi } from "./contract/abi";
 
-import { Address } from "cluster";
-
-class MediaFactory {
+export class MediaFactory {
   contract: Contract;
   networkId: number;
   signer: Signer;
@@ -49,5 +47,3 @@ class MediaFactory {
     return eventLog;
   }
 }
-
-export default MediaFactory;

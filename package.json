@@ -1,6 +1,6 @@
 {
   "name": "zap-nft-sdk",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "description": "",
   "scripts": {
     "ganache": "ganache-cli --mnemonic 'ostrich mixture embrace quote comic until exchange rubber butter royal august stay'",
@@ -9,6 +9,11 @@
     "build": "tsc",
     "test": "env TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\" }' mocha -r ts-node/register --timeout 100000 'test/**/*.ts'"
   },
+  "main": "dist/src/index.js",
+  "typings": "dist/src/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "keywords": [],
   "author": "",
   "license": "ISC",

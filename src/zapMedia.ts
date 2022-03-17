@@ -5,7 +5,6 @@ import {
   BigNumberish,
   ethers,
   Signer,
-  Wallet,
 } from "ethers";
 
 import {
@@ -28,11 +27,9 @@ import {
 } from "./types";
 
 import invariant from "tiny-invariant";
-import { timeStamp } from "console";
-import { sign } from "crypto";
 
-class ZapMedia {
-  getSigNonces(addess: any) {
+export class ZapMedia {
+  getSigNonces(_addess: any) {
     throw new Error("Method not implemented.");
   }
   public networkId: number;
@@ -923,4 +920,3 @@ class ZapMedia {
     };
   }
 }
-export default ZapMedia;

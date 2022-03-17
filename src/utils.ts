@@ -4,12 +4,11 @@ import {
   zapMediaAddresses,
   zapAuctionAddresses,
 } from "./contract/addresses";
-import { DecimalValue, BidShares, MediaData, Ask, Bid } from "./types";
+import { DecimalValue, MediaData, Ask, Bid } from "./types";
 import invariant from "tiny-invariant";
 import warning from "tiny-warning";
 
 import { BigNumber, BigNumberish, BytesLike, ethers } from "ethers";
-import { formatUnits } from "ethers/lib/utils";
 
 let mediaFactoryAddress: string;
 

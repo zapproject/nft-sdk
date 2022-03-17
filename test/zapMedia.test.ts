@@ -12,11 +12,10 @@ import {
   constructMediaData,
   constructBid,
   Decimal,
-  validateBidShares,
 } from "../src/utils";
 
-import ZapMedia from "../src/zapMedia";
-import MediaFactory from "../src/mediaFactory";
+import { ZapMedia } from "../src/zapMedia";
+import { MediaFactory } from "../src/mediaFactory";
 
 import {
   mediaFactoryAddresses,
@@ -26,7 +25,6 @@ import {
 
 import {
   deployZapToken,
-  deployZapVault,
   deployZapMarket,
   deployZapMediaImpl,
   deployMediaFactory,
@@ -39,8 +37,6 @@ import {
   signMintWithSigMessage,
 } from "./test_utils";
 import { EIP712Signature, Bid, BidShares, Ask } from "../src/types";
-import { BlobOptions } from "buffer";
-import { SrvRecord } from "dns";
 import { beforeEach } from "mocha";
 
 const provider = new ethers.providers.JsonRpcProvider("http://localhost:8545");
@@ -55,14 +51,12 @@ describe("ZapMedia", () => {
   let mediaDataOne: any;
   let mediaDataTwo: any;
   let token: Contract;
-  let zapVault: Contract;
   let zapMarket: Contract;
   let mediaFactoryDeployed: Contract;
   let zapMedia: Contract;
 
   let signer: Signer;
   let signerOne: Signer;
-  let bidder: Signer;
 
   let mediaFactory: MediaFactory;
   let signerOneConnected: ZapMedia;
@@ -71,7 +65,6 @@ describe("ZapMedia", () => {
   let customMediaSigner1: ZapMedia;
   let customMediaAddress: string;
   let bidderMainConnected: ZapMedia;
-  let bidderCustomConnected: ZapMedia;
 
   let eipSig: any;
 
@@ -88,7 +81,6 @@ describe("ZapMedia", () => {
     signerOne = signers[1];
 
     token = await deployZapToken();
-    zapVault = await deployZapVault();
     zapMarket = await deployZapMarket();
     await deployZapMediaImpl();
     mediaFactoryDeployed = await deployMediaFactory();
@@ -183,8 +175,6 @@ describe("ZapMedia", () => {
     customMediaSigner0 = new ZapMedia(1337, signer, customMediaAddress);
 
     bidderMainConnected = new ZapMedia(1337, signerOne);
-
-    bidderCustomConnected = new ZapMedia(1337, bidder, customMediaAddress);
 
     // The owner (signers[0]) mints on their own media contract
     await ownerConnected.mint(mediaDataOne, bidShares);
