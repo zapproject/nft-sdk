@@ -31,5 +31,5 @@ jobs:
       - run: yarn install --frozen-lockfile
       - run: yarn global add ganache-cli
       - run: yarn run build
-      - run: yarn ganache
+      - run: nohup yarn ganache
       # - run: yarn test
