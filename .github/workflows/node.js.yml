@@ -4,11 +4,13 @@
 # Name of the workflow
 name: Node.js CI
 
+# Defines which events trigger the workflow
 on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
+  push
+  # push:
+  #   branches: [main]
+  # pull_request:
+  #   branches: [main]
 
 jobs:
   build:
