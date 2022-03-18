@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+env:
+  NPM_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -22,7 +25,5 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: "yarn"
       - run: yarn install --frozen-lockfile
-      - env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       - run: yarn npm version patch
       - run: yarn npm publish --access public
