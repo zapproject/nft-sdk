@@ -1,5 +1,7 @@
 # Zap NFT SDK
 
+[![Node.js CI](https://github.com/zapproject/nft-sdk/actions/workflows/node.js.yml/badge.svg)](https://github.com/zapproject/nft-sdk/actions/workflows/node.js.yml)
+
 - [MediaFactory](docs/mediaFactory.md)
 - [ZapMedia](docs/zapMedia.md)
 - [AuctionHouse](docs/auctionHouse.md)
