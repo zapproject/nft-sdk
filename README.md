@@ -3,8 +3,8 @@
 [![Node.js CI](https://github.com/zapproject/nft-sdk/actions/workflows/node.js.yml/badge.svg)](https://github.com/zapproject/nft-sdk/actions/workflows/node.js.yml)
 
 - [MediaFactory](https://github.com/zapproject/nft-sdk/blob/main/docs/mediaFactory.md)
-- [ZapMedia](docs/zapMedia.md)
-- [AuctionHouse](docs/auctionHouse.md)
+- [ZapMedia](https://github.com/zapproject/nft-sdk/blob/main/docs/zapMedia.md)
+- [AuctionHouse](https://github.com/zapproject/nft-sdk/blob/main/docs/auctionHouse.md)
 
 ## Local Testing
 
