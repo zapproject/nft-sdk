@@ -1,37 +1,18 @@
 {
-  "include": ["src", "test"],
-  "exclude": ["node_modules"], 
-  "compilerOptions": {
-    "outDir": "./dist",
-    "target": "es5",
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true,
-    "preserveConstEnums": true,
-    "forceConsistentCasingInFileNames": true,
-    "importHelpers": true,
-    "declaration": true,
-    "sourceMap": true,
-    "rootDir": "./",
-    "strict": true,
-    "noImplicitAny": true,
-    "strictNullChecks": true,
-    "strictFunctionTypes": true,
-    "strictPropertyInitialization": true,
-    "noImplicitThis": true,
-    "alwaysStrict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-    "baseUrl": "./",
-    "esModuleInterop": true,
-    "resolveJsonModule": true,
-    "skipLibCheck": true,
-    "types": [
-      "node",
-      "mocha",
-      "chai"
-    ], /* Specify type package names to be included without being referenced in a source file. */        
+    // https://www.typescriptlang.org/tsconfig#compilerOptions
+    "compilerOptions": {
+      "esModuleInterop": true,
+      "lib": ["es2020"],
+      "module": "commonjs",
+      "preserveConstEnums": true,
+      "moduleResolution": "node",
+      "strict": true,
+      "sourceMap": true,
+      "target": "es2022",
+      "types": ["node"],
+      "outDir": "dist",
+      "resolveJsonModule": true
+    },
+    "include": ["nft-sdk-test.ts"],
+    "exclude": ["node_modules"]
   }
-}
