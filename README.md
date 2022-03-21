@@ -2,7 +2,7 @@
 
 [![Node.js CI](https://github.com/zapproject/nft-sdk/actions/workflows/node.js.yml/badge.svg)](https://github.com/zapproject/nft-sdk/actions/workflows/node.js.yml)
 
-- [MediaFactory](docs/mediaFactory.md)
+- [MediaFactory](https://github.com/zapproject/nft-sdk/blob/main/docs/mediaFactory.md)
 - [ZapMedia](docs/zapMedia.md)
 - [AuctionHouse](docs/auctionHouse.md)
 
