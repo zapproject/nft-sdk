@@ -27,6 +27,6 @@ jobs:
       - run: yarn install --frozen-lockfile
       - run: export NVM_DIR=~/.nvm
       - run: source ~/.nvm/nvm.sh
-      - run: npm config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}"
-      - run: yarn npm version patch
-      - run: yarn npm publish --access public
+      - run: yarn config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}"
+      - run: yarn version patch
+      - run: yarn publish --access public
