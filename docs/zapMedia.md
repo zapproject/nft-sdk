@@ -1,6 +1,48 @@
-# ZapMedia Class
+ZapMedia Class
+==============
 
-## Constructor
+
+Index
+-----
+
+### Constructors
+
+*   [constructor](#constructor)
+
+### Methods
+
+*   [fetchBalanceOf](#fetchBalanceOf)
+*   [fetchOwnerOf](#fetchOwnerOf)
+*   [fetchMediaOfOwnerByIndex](#fetchMediaOfOwnerByIndex)
+*   [fetchContentURI](#fetchContentURI)
+*   [fetchMetadataURI](#fetchMetadataURI)
+*   [fetchContentHash](#fetchContentHash)
+*   [fetchMetadataHash](#fetchMetadataHash)
+*   [fetchCreator](#fetchCreator)
+*   [fetchCurrentBidShares](#fetchCurrentBidShares)
+*   [fetchCurrentAsk](#fetchCurrentAsk)
+*   [fetchCurrentBidForBidder](#fetchCurrentBidForBidder)
+*   [fetchTotalMedia](#fetchTotalMedia)
+*   [fetchMediaByIndex](#fetchMediaByIndex)
+*   [fetchApproved](#fetchApproved)
+*   [fetchIsApprovedForAll](#fetchIsApprovedForAll)
+*   [mint](#mint)
+*   [setAsk](#setAsk)
+*   [setBid](#setBid)
+*   [removeAsk](#removeAsk)
+*   [acceptBid](#acceptBid)
+*   [removeBid](#removeBid)
+*   [updateContentURI](#updateContentURI)
+*   [updateMetadataURI](#updateMetadataURI)
+*   [permit](#permit)
+*   [revokeApproval](#revokeApproval)
+*   [burn](#burn)
+
+
+Constructor
+-----------
+
+### Constructor[](#constructor)
 
 ```
  constructor(networkId: number, signer: Signer, customMediaAddress?: string) {
@@ -53,9 +95,11 @@ The constructor takes in `signer` the abstraction of a Blockchain Account, which
 
 The constructor takes in `customMediaAddress` and represents the address of a `ZapMedia` contract deployed and owned by an individual user and is not the default Zap NFT collection. When this argument is not passed to the constructor it defaults to the Zap NFT collection, but when a valid address is passed to the constructor that address attaches itself to the default `ZapMedia` contract instance and creates the custom instance deployed by an individual user.
 
-## Read Functions
 
-### fetchBalanceOf
+Methods
+-------
+
+### fetchBalanceOf[](#fetchBalanceOf)
 
 Fetch the balance of an address on an instance of a ZapMedia contract
 
@@ -63,7 +107,8 @@ Fetch the balance of an address on an instance of a ZapMedia contract
 | ------------ | -------- | --------------------------------------------------------- |
 | owner        | string   | The address of the account whose balance is being fetched |
 
-### fetchOwnerOf
+
+### fetchOwnerOf[](#fetchOwnerOf)
 
 Fetch the owner of a tokenId on an instance of a ZapMedia contract
 
@@ -71,7 +116,8 @@ Fetch the owner of a tokenId on an instance of a ZapMedia contract
 | ------------ | ------------ | ----------------------------------------------------------------------- |
 | tokenId      | BigNumberish | The Numerical identifier of a minted token whose owner is being fetched |
 
-### fetchMediaOfOwnerByIndex
+
+### fetchMediaOfOwnerByIndex[](#fetchMediaOfOwnerByIndex)
 
 Fetch the tokenId of the specified owner by index on an instance of a ZapMedia Contract
 
@@ -80,7 +126,8 @@ Fetch the tokenId of the specified owner by index on an instance of a ZapMedia C
 | owner        | string       | The owner address of the tokenId          |
 | index        | BigNumberish | The ERC-721 enumerbale index of the owner |
 
-### fetchContentURI
+
+### fetchContentURI[](#fetchContentURI)
 
 Fetch the content uri for the specified tokenId on an instance of a ZapMedia Contract
 
@@ -88,7 +135,8 @@ Fetch the content uri for the specified tokenId on an instance of a ZapMedia Con
 | ------------ | ------------ | ----------------------------------------------------------------------------- |
 | tokenId      | BigNumberish | The Numerical identifier of a minted token whose content uri is being fetched |
 
-### fetchMetadataURI
+
+### fetchMetadataURI[](#fetchMetadataURI)
 
 Fetch the metadata uri for the specified tokenId on an instance of a ZapMedia Contract
 
@@ -96,7 +144,8 @@ Fetch the metadata uri for the specified tokenId on an instance of a ZapMedia Co
 | ------------ | ------------ | ------------------------------------------------------------------------------ |
 | tokenId      | BigNumberish | The Numerical identifier of a minted token whose metadata uri is being fetched |
 
-### fetchContentHash
+
+### fetchContentHash[](#fetchContentHash)
 
 Fetch the contentHash of a tokenId on an instance of a ZapMedia contract.
 
@@ -104,7 +153,8 @@ Fetch the contentHash of a tokenId on an instance of a ZapMedia contract.
 | ------------ | ------------ | ----------------------------------------------------------------------------- |
 | tokenId      | BigNumberish | The Numerical identifier of a minted token whose contentHash is being fetched |
 
-### fetchMetadataHash
+
+### fetchMetadataHash[](#fetchMetadataHash)
 
 Fetch the metadataHash of a tokenId on an instance of a ZapMedia contract.
 
@@ -112,7 +162,8 @@ Fetch the metadataHash of a tokenId on an instance of a ZapMedia contract.
 | ------------ | ------------ | ------------------------------------------------------------------------------ |
 | tokenId      | BigNumberish | The Numerical identifier of a minted token whose metadataHash is being fetched |
 
-### fetchCreator
+
+### fetchCreator[](#fetchCreator)
 
 Fetch the creator of a tokenId on an instance of a ZapMedia contract.
 
@@ -120,7 +171,8 @@ Fetch the creator of a tokenId on an instance of a ZapMedia contract.
 | ------------ | ------------ | ------------------------------------------------------------------------- |
 | tokenId      | BigNumberish | The Numerical identifier of a minted token whose creator is being fetched |
 
-### fetchCurrentBidShares
+
+### fetchCurrentBidShares[](#fetchCurrentBidShares)
 
 Fetch the current bidShares of a tokenId on an instance of a ZapMedia contract.
 
@@ -129,7 +181,8 @@ Fetch the current bidShares of a tokenId on an instance of a ZapMedia contract.
 | mediaAddress | string       | The address of a ZapMedia contract                                           |
 | tokenId      | BigNumberish | The Numerical identifier of a minted token whose bidShares are being fetched |
 
-### fetchCurrentAsk
+
+### fetchCurrentAsk[](#fetchCurrentAsk)
 
 Fetch the current ask of a tokenId on an instance of a ZapMedia contract.
 
@@ -138,7 +191,8 @@ Fetch the current ask of a tokenId on an instance of a ZapMedia contract.
 | mediaAddress | string       | The address of a ZapMedia contract                                    |
 | tokenId      | BigNumberish | The Numerical identifier of a minted token whose ask is being fetched |
 
-### fetchCurrentBidForBidder
+
+### fetchCurrentBidForBidder[](#fetchCurrentBidForBidder)
 
 Fetch the current bid for a bidder on an instance of a ZapMedia contract.
 
@@ -148,7 +202,8 @@ Fetch the current bid for a bidder on an instance of a ZapMedia contract.
 | tokenId      | BigNumberish | The Numerical identifier of a minted token whose bid is being fetched |
 | bidder       | string       | The address of the bidder                                             |
 
-### fetchTotalMedia
+
+### fetchTotalMedia[](#fetchTotalMedia)
 
 Fetch the total amount of non-burned tokens that has been minted on an instance of a ZapMedia contract
 
@@ -156,7 +211,8 @@ Fetch the total amount of non-burned tokens that has been minted on an instance 
 | ------------ | -------- | --------------- |
 | None         | None     | None            |
 
-### fetchMediaByIndex
+
+### fetchMediaByIndex[](#fetchMediaByIndex)
 
 Fetch the tokenId by index on an instance of a ZapMedia contract
 
@@ -164,7 +220,8 @@ Fetch the tokenId by index on an instance of a ZapMedia contract
 | ------------ | ------------ | ------------------------------------------------------------------ |
 | index        | BigNumberish | The ERC-721 enumerbale index on an instance of a ZapMedia contract |
 
-### fetchApproved
+
+### fetchApproved[](#fetchApproved)
 
 Fetch the approved account for the specified tokenId
 
@@ -172,7 +229,8 @@ Fetch the approved account for the specified tokenId
 | ------------ | ------------ | ---------------------------------------------------------------------------------- |
 | tokenId      | BigNumberish | The Numerical identifier of a minted token whose approved address is being fetched |
 
-### fetchIsApprovedForAll
+
+### fetchIsApprovedForAll[](#fetchIsApprovedForAll)
 
 Fetch if the specified operator is approved for all tokenId's owned by the specified owner on an instance of a ZapMedia contract
 
@@ -181,9 +239,8 @@ Fetch if the specified operator is approved for all tokenId's owned by the speci
 | owner        | string   | The address of the token's owner                   |
 | operator     | string   | The address of the approved on behalf of the owner |
 
-## Write Functions
 
-### mint
+### mint[](#mint)
 
 Create and allocate an ERC-721 token to the callers public address
 
@@ -192,7 +249,8 @@ Create and allocate an ERC-721 token to the callers public address
 | mediaData    | MediaData | The data represented by this media, including SHA256 hashes for future integrity checks |
 | bidShares    | BidShares | The percentage of bid fees that should be perpetually rewarded to share holders         |
 
-### setAsk
+
+### setAsk[](#setAsk)
 
 Sets the Ask on a specified tokenId
 
@@ -201,7 +259,8 @@ Sets the Ask on a specified tokenId
 | tokenId      | BigNumberish | The numerical identifier of a minted token whose ask is being set |
 | ask          | Ask          | The ask to be set                                                 |
 
-### setBid
+
+### setBid[](#setBid)
 
 Sets a bid on the specified tokenId
 
@@ -210,7 +269,8 @@ Sets a bid on the specified tokenId
 | tokenId      | BigNumberish | The numerical identifier of a minted token to set a bid on |
 | bid          | Bid          | The bid to be set                                          |
 
-### removeAsk
+
+### removeAsk[](#removeAsk)
 
 Removes the ask on the specified tokenId
 
@@ -218,7 +278,8 @@ Removes the ask on the specified tokenId
 | ------------ | ------------ | --------------------------------------------------- |
 | tokenId      | BigNumberish | The numerical identifier whose ask is being removed |
 
-### acceptBid
+
+### acceptBid[](#acceptBid)
 
 Accept a bid on a specified tokenId
 
@@ -227,7 +288,8 @@ Accept a bid on a specified tokenId
 | tokenId      | BigNumberish | The numerical identifier of a minted token whose bid is being accepted |
 | bid          | Bid          | The bid to be accepted                                                 |
 
-### removeBid
+
+### removeBid[](#removeBid)
 
 Removes the bid from a specified tokenId
 
@@ -235,7 +297,8 @@ Removes the bid from a specified tokenId
 | ------------ | ------------ | --------------------------------------------------------------------- |
 | tokenId      | BigNumberish | The Numerical identifier of a minted token whose bid is being removed |
 
-### updateMetadataURI
+
+### updateMetadataURI[](#updateMetadataURI)
 
 Updates the metadataUII of a specified tokenId
 
@@ -244,7 +307,8 @@ Updates the metadataUII of a specified tokenId
 | tokenId      | BigNumberish | The numerical identifier of a minted token whose metadURI is being updated |
 | metadataURI  | string       | The metadataURI to be updated to                                           |
 
-### permit
+
+### permit[](#permit)
 
 Permit an address to act on behalf of the owner of the tokenId
 
@@ -254,7 +318,8 @@ Permit an address to act on behalf of the owner of the tokenId
 | tokenId      | string          | The numerical identifier for a minted token              |
 | sig          | EIP712Signature | The eip-712 compliant signature to be verified on chain  |
 
-### revokeApproval
+
+### revokeApproval[](#revokeApproval)
 
 Revokes the approved address for a specified tokenId
 
@@ -262,7 +327,8 @@ Revokes the approved address for a specified tokenId
 | ------------ | -------- | ------------------------------------------------------------------------- |
 | tokenId      | string   | The numerical identifier for a minted token who approval is being revoked |
 
-### burn
+
+### burn[](#burn)
 
 Burns a specified tokenId
 
@@ -270,7 +336,8 @@ Burns a specified tokenId
 | ------------ | -------- | -------------------------------------------------------- |
 | tokenId      | string   | The numerical identifier for a minted token to be burned |
 
-### updateContentURI
+
+### updateContentURI[](#updateContentURI)
 
 Updates the contentURI of a specified tokenId
 
@@ -278,3 +345,39 @@ Updates the contentURI of a specified tokenId
 | ------------ | ------------ | ---------------------------------------------------------------------------- |
 | tokenId      | BigNumberish | The numerical identifier of a minted token whose contentURI is being updated |
 | tokenURI     | string       | The tokenURI to be updated to                                                |
+
+
+Examples
+--------
+
+### Creating a ZapMedia class instance[](#instantiation)
+For this example, we are using chainId 4 and a Rinkeby provider node. The chainId and provider node can be replaced with the other available chainId's supported by Zap.
+
+```
+// Requires dotenv to allow the reading of environment variables
+require("dotenv").config();
+
+// Rinkeby chainId
+const rinkebyChainId = 4;
+
+// Requires the ZapMedia class
+const { ZapMedia } = require("@zapprotocol/nft-sdk");
+
+// Requires the ethers.js library
+const ethers = require("ethers");
+
+// Infura Rinkeby URL
+const testnetUrl = `https://rinkeby.infura.io/v3/${process.env.PROJECT_ID}`;
+
+// Creates the instance for the Rinkeby testnet provider
+const provider = new ethers.providers.JsonRpcProvider(
+  testnetUrl,
+  rinkebyChainId
+);
+
+// Creates the signer instance with the users private key and provider
+const signer = new ethers.Wallet(process.env.PRIVATE_KEY, provider);
+
+// Creates the ZapMedia class instance on the Rinkeby testnet with the signer connected
+const zapMedia = new ZapMedia(rinkebyChainId, signer);
+```

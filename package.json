@@ -1,7 +1,7 @@
 {
   "name": "@zapprotocol/nft-sdk",
   "version": "1.0.6",
-  "description": "",
+  "description": "This Software Development Kit is used to build on the Zap NFT Marketplace.",
   "scripts": {
     "ganache": "ganache-cli --mnemonic 'ostrich mixture embrace quote comic until exchange rubber butter royal august stay'",
     "ganache-npx": "npx ganache-cli --mnemonic 'ostrich mixture embrace quote comic until exchange rubber butter royal august stay'",
