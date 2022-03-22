@@ -57,6 +57,61 @@ const signer = new ethers.Wallet(process.env.PRIVATE_KEY, provider);
 
 // Creates the MediaFactory class instance on the Rinkeby testnet with the signer connected
 const mediaFactory = new MediaFactory(rinkebyChainId, signer);
+
+const main = async () => {
+
+  // Invoke the deployMedia function
+  const deployMediaTx = await mediaFactory.deployMedia(
+    // Collection name example
+    "Test Collection",
+
+    // Collection symbol example
+    "TC",
+
+    // Collection permissions example
+    true,
+
+    /* Collection metadata example
+     * Be sure to create metadata that follows OpenSea standards
+     * See https://docs.opensea.io/docs/contract-level-metadata
+     */
+    "https://ipfs.io/ipfs/Qme7ss3ARVgxv6rXqVPiikMJ8u2NLgmgszg13pYrDKEoiu"
+  );
+
+  // Logs the deployMedia transaction receipt
+  console.log(deployMediaTx);
+};
+
+main();
+```
+
+Transaction receipt output
+
+```
+{
+  transactionIndex: 37,
+  blockNumber: 10372096,
+  transactionHash: '0xcb9b3bac73c627a9a375ef4a1821453934e79dba9d43a3de084cc92b02f67607',
+  address: '0x3a8f450C7844A8e8AbeFc7a0A7F37e8beC28c77C',
+  topics: [
+    '0xe4a881f0c02d889ad207adf5c28b33a60537c4485de8183463868e4ce4ec89cd',
+    '0x0000000000000000000000001a04b52fa1fff5cd1ccb5617812b0cbb9eb8c401'
+  ],
+  data: '0x',
+  logIndex: 77,
+  blockHash: '0x41eb9271baac9f3114ca7e125c704820fcce18d5d70e5a12894af2ecea3914a1',
+  args: [
+    '0x1A04B52Fa1FFf5CD1cCb5617812b0cbb9eb8c401',
+    mediaContract: '0x1A04B52Fa1FFf5CD1cCb5617812b0cbb9eb8c401'
+  ],
+  decode: [Function (anonymous)],
+  event: 'MediaDeployed',
+  eventSignature: 'MediaDeployed(address)',
+  removeListener: [Function (anonymous)],
+  getBlock: [Function (anonymous)],
+  getTransaction: [Function (anonymous)],
+  getTransactionReceipt: [Function (anonymous)]
+}
 ```
 
 ## Write Functions
