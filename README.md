@@ -11,19 +11,22 @@
 - [utils](https://github.com/zapproject/nft-sdk/blob/main/docs/utils.md)
 - [types](https://github.com/zapproject/nft-sdk/blob/main/docs/types.md)
 
-## Local Testing
 
-### Configuration
+## Development
+
+### Local Testing
+
+#### Configuration
 
 - In the current terminal verify the path is `nft-sdk` and run `yarn install` to install all dependencies
 
-### To Run All Test Files
+#### To Run All Test Files
 
 - In a new terminal verify the path is `nft-sdk` and run `yarn run ganache` to start the local Ganache node.
 
 - In the original terminal where `yarn install` was executed verify the path is `nft-sdk` and run `yarn run test` or `yarn test`.
 
-### To Run A Single Test File
+#### To Run A Single Test File
 
 - Single test file titles `MediaFactory`, `ZapMedia`, `AuctionHouse`.
 
@@ -31,7 +34,7 @@
 
 - In the original terminal where `yarn install` was executed verify the path is `nft-sdk` and run `yarn test -- --grep <test-file-title>`
 
-### To Run A Single Test
+#### To Run A Single Test
 
 - If the `To Run All Test Files` section was skipped in a new terminal verify the path is `nft-sdk` and run `yarn run ganache` to start the local Ganache node.
 
