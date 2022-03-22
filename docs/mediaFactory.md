@@ -34,6 +34,7 @@ The constructor takes in `signer` the abstraction of a Blockchain Account, which
 // Requires dotenv to allow the reaading of environment variables
 require("dotenv").config();
 
+// Rinkeby chainId
 const rinkebyChainId = 4;
 
 // Requires the MediaFactory class
