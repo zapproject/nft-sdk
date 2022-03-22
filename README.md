@@ -12,6 +12,9 @@
 - [types](https://github.com/zapproject/nft-sdk/blob/main/docs/types.md)
 
 
+## Installation
+`yarn add @zapprotocol/nft-sdk`
+
 ## Development
 
 ### Local Testing
