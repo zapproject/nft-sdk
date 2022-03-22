@@ -1,5 +1,6 @@
 import { AuctionHouse, Auction, ZapMedia, MediaFactory } from "@zapprotocol/nft-sdk";
 import { constructMediaData, constructBidShares } from "@zapprotocol/nft-sdk";
+import { contractAddresses } from "@zapprotocol/nft-sdk";
 import { address } from "./config.json";
 import { ethers, Signer, Wallet } from "ethers";
 
@@ -46,9 +47,18 @@ async function main(){
     let tokenId = await zm.fetchOwnerOf(37);
     console.log(tokenId);
 
-    // await zm.approve(, 37);
+    await zm.approve(contractAddresses(97).zapAuctionAddress, 37);
 
-    let auctionID = await ah.createAuction(37, zm.mediaAddress, 300000, 10000000000000000000, "", 0, "0x5FbDB2315678afecb367f032d93F642f64180aa3");
+    let auctionID = await ah.createAuction(
+        37, 
+        contractAddresses(97).zapMediaAddress, 
+        300000, 
+        10000000000000000000, 
+        "", 
+        0, 
+        "0x5FbDB2315678afecb367f032d93F642f64180aa3"
+    );
+
     console.log(auctionID);
 }
 
