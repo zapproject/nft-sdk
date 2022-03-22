@@ -24,6 +24,9 @@ Constructor
 
 ### Constructor[](#Constructor)
 
+*   Defined in [mediaFactory.ts:12](https://github.com/zapproject/nft-sdk/blob/main/src/mediaFactory.ts#L12)
+
+
 ```
 constructor(networkId: number, signer: Signer) {
     this.networkId = networkId;
@@ -56,7 +59,9 @@ Methods
 
 ### deployMedia[](#deploymedia)
 
-Deploys a custom NFT collection
+*   Defined in [mediaFactory.ts:29](https://github.com/zapproject/nft-sdk/blob/main/src/mediaFactory.ts#L29)
+
+    Deploys a custom NFT collection
 
 | **Argument**       | **Type** | **Description**                                                        |
 | ------------------ | -------- | ---------------------------------------------------------------------- |
