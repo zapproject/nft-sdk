@@ -351,6 +351,7 @@ Examples
 --------
 
 ### Creating a ZapMedia class instance[](#instantiation)
+For this example, we are using chainId 4 and a Rinkeby provider node. The chainId and provider node can be replaced with the other available chainId's supported by Zap.
 
 ```
 // Requires dotenv to allow the reading of environment variables
