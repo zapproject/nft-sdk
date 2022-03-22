@@ -1,6 +1,28 @@
-# MediaFactory Class
+MediaFactory Class
+==================
 
-## Constructor
+
+Index
+-----
+
+### Constructors
+
+*   [constructor](#constructor)
+
+### Methods
+
+*   [deployMedia](#deployMedia)
+
+
+### Examples
+
+*   [instantiation](#instantiation)
+
+
+Constructor
+-----------
+
+### Constructor[](#Constructor)
 
 ```
 constructor(networkId: number, signer: Signer) {
@@ -28,7 +50,26 @@ The constructor takes in `networkId` and uses it to route to either the Ethereum
 
 The constructor takes in `signer` the abstraction of a Blockchain Account, which can be used to sign messages and transactions and send signed transactions to the Blockchain to execute state changing operations. The `signer` will be used to connect to the `MediaFactory` and `ZapMarket` contracts in order to invoke these state changing transactions.
 
-### Creating a MediaFactory class instance
+
+Methods
+-------
+
+### deployMedia[](#deploymedia)
+
+Deploys a custom NFT collection
+
+| **Argument**       | **Type** | **Description**                                                        |
+| ------------------ | -------- | ---------------------------------------------------------------------- |
+| collectionName     | string   | The name of the NFT collection                                         |
+| collectionSymbol   | string   | The symbol of the NFT collection                                       |
+| permissive         | boolean  | Determines if minting can be performed other than the collection owner |
+| collectionMetadata | string   | Contract level metadata                                                |
+
+
+Examples
+--------
+
+### Creating a MediaFactory class instance[](#instantiation)
 
 For this example, we are using chainId 4 and a Rinkeby provider node. The chainId and provider node can be replaced with the other available chainId's supported by Zap.
 
@@ -117,16 +158,3 @@ The transaction receipt object properties will be the same regardless of the net
 }
 
 ```
-
-## Write Functions
-
-### deployMedia
-
-Deploys a custom NFT collection
-
-| **Argument**       | **Type** | **Description**                                                        |
-| ------------------ | -------- | ---------------------------------------------------------------------- |
-| collectionName     | string   | The name of the NFT collection                                         |
-| collectionSymbol   | string   | The symbol of the NFT collection                                       |
-| permissive         | boolean  | Determines if minting can be performed other than the collection owner |
-| collectionMetadata | string   | Contract level metadata                                                |
