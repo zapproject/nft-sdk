@@ -29,6 +29,10 @@ Index
 *   [setAuctionReservePrice](#setAuctionReservePrice)
 *   [startAuction](#startAuction)
 
+### Examples
+*   [instantiation](#instantiation)
+
+
 Constructor
 ------------
 
@@ -220,31 +224,59 @@ The Promise auction ID associated with the created auction
     The Promise of the contract call
     
 
-*   [Exports](../docs-gen/modules.html)
-
-*   [default]()
-    *   [constructor](#constructor)
-    *   [auctionHouse](#auctionHouse)
-    *   [chainId](#chainId)
-    *   [media](#media)
-    *   [signer](#signer)
-    *   [cancelAuction](#cancelAuction)
-    *   [createAuction](#createAuction)
-    *   [createBid](#createBid)
-    *   [endAuction](#endAuction)
-    *   [fetchAuction](#fetchAuction)
-    *   [fetchAuctionFromTransactionReceipt](#fetchAuctionFromTransactionReceipt)
-    *   [setAuctionReservePrice](#setAuctionReservePrice)
-    *   [startAuction](#startAuction)
-
-Legend
-------
-
-*   Constructor
-*   Property
-*   Method
-
-*   Property
+Examples
+--------
 
 
-Theme OSLightDark
+### Creating a AuctionHouse class instance on the testnet[](#instantiation)
+For this example, we are using chainId 4 and a Rinkeby provider node. The chainId and provider node can be replaced with the other available chainId's supported by Zap.
+```
+// Requires dotenv to allow the reading of environment variables
+require("dotenv").config();
+
+// Rinkeby chainId. For other testnet instances, replace chain ID. e.i. BSCTestnet = 97
+const rinkebyChainId = 4;
+
+// Requires the AuctionHouse class
+const { AuctionHouse } = require("@zapprotocol/nft-sdk");
+
+// Requires the ethers.js library
+const ethers = require("ethers");
+
+// Infura Rinkeby URL
+const testnetUrl = `https://rinkeby.infura.io/v3/${process.env.PROJECT_ID}`;
+
+// Creates the instance for the Rinkeby testnet provider
+const provider = new ethers.providers.JsonRpcProvider(
+  testnetUrl,
+  rinkebyChainId
+);
+
+// Creates the signer instance with the users private key and provider
+const signer = new ethers.Wallet(process.env.PRIVATE_KEY, provider);
+
+// Create the ZapMedia class instance on the Rinkeby testnet with the signer connected
+const zapMedia = new ZapMedia(rinkebyChainId, signer);
+
+// Creates the AuctionHouse class instance on the Rinkeby testnet with the signer connected
+const auctionHouse = new AuctionHouse(rinkebyChainId, signer);
+
+const main = async () => {
+  // create a new auction
+  let createAuctionTx = await auctionHouse.createAuction(
+      37,
+      "0x0",
+      36000,
+      10000000000,
+      "",
+      0,
+      "0x0"
+  );
+
+  // Logs the createAuction transaction receipt
+  console.log(createAuctionTx);
+};
+
+main();
+
+```
