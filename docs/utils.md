@@ -43,7 +43,7 @@ Functions
 
 *   contractAddresses(networkId: number): any
 
-*   *   Defined in [utils.ts](https://github.com/zapproject/nft-sdk/blob/main/src/utils.ts#L25)
+*   *   Defined in [utils.ts:25](https://github.com/zapproject/nft-sdk/blob/main/src/utils.ts#L25)
 
     Provides the MediaFactory, ZapMarket, ZapMedia, and ZapAuction addresses pertaining to the specified chain ID.
 
@@ -61,7 +61,7 @@ Functions
 
 *   constructAsk(currency: string, amount: BigNumberish): Ask
 
-*   *   Defined in [utils.ts](https://github.com/zapproject/nft-sdk/blob/main/src/utils.ts#L134)
+*   *   Defined in [utils.ts:134](https://github.com/zapproject/nft-sdk/blob/main/src/utils.ts#L134)
 
     Constructs an Ask object.
 
@@ -79,7 +79,7 @@ Functions
 
 *   constructBid(currency: string, amount: BigNumberish, bidder: string, recipient: string, sellOnShare: number): Bid
 
-*   *   Defined in [utils.ts](https://github.com/zapproject/nft-sdk/blob/main/src/utils.ts#L150)
+*   *   Defined in [utils.ts:150](https://github.com/zapproject/nft-sdk/blob/main/src/utils.ts#L150)
 
     Constructs a Bid object.
 
@@ -100,7 +100,7 @@ Functions
 
 *   constructBidShares(collaborators: Array<string>, collabShares: Array<number>, creator: number, owner: number): any
 
-*   *   Defined in [utils.ts](https://github.com/zapproject/nft-sdk/blob/main/src/utils.ts#L276)
+*   *   Defined in [utils.ts:276](https://github.com/zapproject/nft-sdk/blob/main/src/utils.ts#L276)
 
     Constructs a BidShares object.
 
@@ -120,7 +120,7 @@ Functions
 
 *   constructMediaData(tokenURI: string, metadataURI: string, contentHash: BytesLike, metadataHash: BytesLike): MediaData
 
-*   *   Defined in [utils.ts](https://github.com/zapproject/nft-sdk/blob/main/src/utils.ts#L248)
+*   *   Defined in [utils.ts:248](https://github.com/zapproject/nft-sdk/blob/main/src/utils.ts#L248)
 
     Constructs a MediaData object.
 
@@ -140,7 +140,7 @@ Functions
 
 *   validateAndParseAddress(address: string): string
 
-*   *   Defined in [utils.ts](https://github.com/zapproject/nft-sdk/blob/main/src/utils.ts#L326)
+*   *   Defined in [utils.ts:326](https://github.com/zapproject/nft-sdk/blob/main/src/utils.ts#L326)
 
     Validates and returns the checksummed address.
 
@@ -157,7 +157,7 @@ Functions
 
 *   validateBidShares(collabShares: Array<DecimalValue>, creator: DecimalValue, owner: DecimalValue)
 
-*   *   Defined in [utils.ts](https://github.com/zapproject/nft-sdk/blob/main/src/utils.ts#L91)
+*   *   Defined in [utils.ts:91](https://github.com/zapproject/nft-sdk/blob/main/src/utils.ts#L91)
 
     Validates whether the specified bid shares is valid.
 
@@ -172,7 +172,7 @@ Functions
 
 *   validateURI(uri: string)
 
-*   *   Defined in [utils.ts](https://github.com/zapproject/nft-sdk/blob/main/src/utils.ts#L315)
+*   *   Defined in [utils.ts:315](https://github.com/zapproject/nft-sdk/blob/main/src/utils.ts#L315)
 
     Validates whether the URI is prefixed with 'https://".
 

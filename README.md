@@ -9,7 +9,7 @@
 
 ## Exported Functions
 - [utils](https://github.com/zapproject/nft-sdk/blob/main/docs/utils.md)
-- [types]
+- [types]((https://github.com/zapproject/nft-sdk/blob/main/docs/types.md))
 
 ## Local Testing
 
