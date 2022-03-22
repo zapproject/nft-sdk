@@ -83,6 +83,7 @@ const main = async () => {
 };
 
 main();
+
 ```
 
 ### Creating a MediaFactory class instance on the Binance Smart Chain testnet
