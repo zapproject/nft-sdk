@@ -8,7 +8,7 @@
 - [AuctionHouse](https://github.com/zapproject/nft-sdk/blob/main/docs/auctionHouse.md)
 
 ## Exported Functions
-- [utils](https://github.com/zapproject/nft-sdk/blob/main/docs/utils.md))
+- [utils](https://github.com/zapproject/nft-sdk/blob/main/docs/utils.md)
 - [types]
 
 ## Local Testing
