@@ -168,6 +168,7 @@ The transaction receipt object properties will be the same regardless of the net
   getTransaction: [Function (anonymous)],
   getTransactionReceipt: [Function (anonymous)]
 }
+
 ```
 
 ## Write Functions
