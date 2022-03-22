@@ -28,7 +28,9 @@ The constructor takes in `networkId` and uses it to route to either the Ethereum
 
 The constructor takes in `signer` the abstraction of a Blockchain Account, which can be used to sign messages and transactions and send signed transactions to the Blockchain to execute state changing operations. The `signer` will be used to connect to the `MediaFactory` and `ZapMarket` contracts in order to invoke these state changing transactions.
 
-### Creating a MediaFactory class instance on the Rinkeby testnet
+### Creating a MediaFactory class instance
+
+For this example, we are using chainId 4 and a Rinkeby provider node. The chainId and provider node can be replaced with the other available chainId's supported by Zap.
 
 ```
 // Requires dotenv to allow the reading of environment variables
@@ -84,62 +86,6 @@ const main = async () => {
 
 main();
 
-```
-
-### Creating a MediaFactory class instance on the Binance Smart Chain testnet
-
-```
-// Requires dotenv to allow the reading of environment variables
-require("dotenv").config();
-
-// BSC chainId
-const bscTestnetChainId = 97;
-
-// Requires the MediaFactory class
-const { MediaFactory } = require("@zapprotocol/nft-sdk");
-
-// Requires the ethers.js library
-const ethers = require("ethers");
-
-// Moralis Speedy Node BSC URL
-const testnetUrl = `https://speedy-nodes-nyc.moralis.io/${process.env.PROJECT_ID}/bsc/testnet`;
-
-// Creates the instance for the BSC testnet provider
-const provider = new ethers.providers.JsonRpcProvider(
-  testnetUrl,
-  bscTestnetChainId
-);
-
-// Creates the signer instance with the users private key and provider
-const signer = new ethers.Wallet(process.env.PRIVATE_KEY, provider);
-
-// Creates the MediaFactory class instance on the BSC testnet with the signer connected
-const mediaFactory = new MediaFactory(bscTestnetChainId, signer);
-
-const main = async () => {
-  // Invoke the deployMedia function
-  const deployMediaTx = await mediaFactory.deployMedia(
-    // Collection name example
-    "Test Collection",
-
-    // Collection symbol example
-    "TC",
-
-    // Collection permissions example
-    true,
-
-    /* Collection metadata example
-     * Be sure to create metadata that follows OpenSea standards
-     * See https://docs.opensea.io/docs/contract-level-metadata
-     */
-    "https://ipfs.io/ipfs/Qme7ss3ARVgxv6rXqVPiikMJ8u2NLgmgszg13pYrDKEoiu"
-  );
-
-  // Logs the deployMedia transaction receipt
-  console.log(deployMediaTx);
-};
-
-main();
 ```
 
 The transaction receipt object properties will be the same regardless of the network. This transaction receipt is from the Rinkeby testnet to show as an example.
