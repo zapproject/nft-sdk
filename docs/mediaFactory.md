@@ -56,7 +56,6 @@ const signer = new ethers.Wallet(process.env.PRIVATE_KEY, provider);
 
 // Creates the MediaFactory class instance on the Rinkeby testnet with the signer connected
 const mediaFactory = new MediaFactory(rinkebyChainId, signer);
-
 ```
 
 ## Write Functions
