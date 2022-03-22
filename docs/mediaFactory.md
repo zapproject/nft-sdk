@@ -144,7 +144,6 @@ main();
 The transaction receipt object properties will be the same regardless of the network. This transaction receipt is from the Rinkeby testnet to show as an example.
 
 ```
-
 {
   transactionIndex: 37,
   blockNumber: 10372096,
