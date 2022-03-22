@@ -3,17 +3,29 @@
 [![Node.js CI](https://github.com/zapproject/nft-sdk/actions/workflows/node.js.yml/badge.svg)](https://github.com/zapproject/nft-sdk/actions/workflows/node.js.yml)
 
 ## Classes
+
 - [MediaFactory](https://github.com/zapproject/nft-sdk/blob/main/docs/mediaFactory.md)
 - [ZapMedia](https://github.com/zapproject/nft-sdk/blob/main/docs/zapMedia.md)
 - [AuctionHouse](https://github.com/zapproject/nft-sdk/blob/main/docs/auctionHouse.md)
 
 ## Exported Functions
+
 - [utils](https://github.com/zapproject/nft-sdk/blob/main/docs/utils.md)
 - [types](https://github.com/zapproject/nft-sdk/blob/main/docs/types.md)
 
-
 ## Installation
-`yarn add @zapprotocol/nft-sdk`
+
+Yarn
+
+```
+yarn add @zapprotocol/nft-sdk
+```
+
+Npm
+
+```
+npm i @zapprotocol/nft-sdk
+```
 
 ## Development
 
