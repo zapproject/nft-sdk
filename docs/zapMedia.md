@@ -53,6 +53,37 @@ The constructor takes in `signer` the abstraction of a Blockchain Account, which
 
 The constructor takes in `customMediaAddress` and represents the address of a `ZapMedia` contract deployed and owned by an individual user and is not the default Zap NFT collection. When this argument is not passed to the constructor it defaults to the Zap NFT collection, but when a valid address is passed to the constructor that address attaches itself to the default `ZapMedia` contract instance and creates the custom instance deployed by an individual user.
 
+### Creating a ZapMedia class instance
+
+```
+// Requires dotenv to allow the reading of environment variables
+require("dotenv").config();
+
+// Rinkeby chainId
+const rinkebyChainId = 4;
+
+// Requires the ZapMedia class
+const { ZapMedia } = require("@zapprotocol/nft-sdk");
+
+// Requires the ethers.js library
+const ethers = require("ethers");
+
+// Infura Rinkeby URL
+const testnetUrl = `https://rinkeby.infura.io/v3/${process.env.PROJECT_ID}`;
+
+// Creates the instance for the Rinkeby testnet provider
+const provider = new ethers.providers.JsonRpcProvider(
+  testnetUrl,
+  rinkebyChainId
+);
+
+// Creates the signer instance with the users private key and provider
+const signer = new ethers.Wallet(process.env.PRIVATE_KEY, provider);
+
+// Creates the ZapMedia class instance on the Rinkeby testnet with the signer connected
+const zapMedia = new ZapMedia(rinkebyChainId, signer);
+```
+
 ## Read Functions
 
 ### fetchBalanceOf
