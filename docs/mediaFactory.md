@@ -28,10 +28,9 @@ The constructor takes in `networkId` and uses it to route to either the Ethereum
 
 The constructor takes in `signer` the abstraction of a Blockchain Account, which can be used to sign messages and transactions and send signed transactions to the Blockchain to execute state changing operations. The `signer` will be used to connect to the `MediaFactory` and `ZapMarket` contracts in order to invoke these state changing transactions.
 
-## Creating a MediaFactory class instance on the Rinkeby testnet
+### Creating a MediaFactory class instance on the Rinkeby testnet
 
 ```
-
 // Requires dotenv to allow the reaading of environment variables
 require("dotenv").config();
 
@@ -57,7 +56,6 @@ const signer = new ethers.Wallet(process.env.PRIVATE_KEY, provider);
 
 // Creates the MediaFactory class instance on the Rinkeby testnet with the signer connected
 const mediaFactory = new MediaFactory(rinkebyChainId, signer);
-
 ```
 
 ## Write Functions
