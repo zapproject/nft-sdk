@@ -38,6 +38,10 @@ Index
 *   [revokeApproval](#revokeApproval)
 *   [burn](#burn)
 
+### Examples
+
+*   [instantiation](#instantiation)
+
 
 Constructor
 -----------
